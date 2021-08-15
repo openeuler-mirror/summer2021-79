@@ -1,0 +1,12 @@
+[package]
+name = "happ"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+syn = { version = "1.0", features = ["full", "visit", "printing", "proc-macro", "derive", "extra-traits"] }
+proc-macro2 = { version = "1.0.20", features = ["span-locations"] }
+clap = "2.33.0"
+walkdir = "2"
