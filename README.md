@@ -9,6 +9,8 @@ https://gitee.com/openeuler-competition/summer-2021/issues/I3GZRY
 - 圈复杂度统计
 - 文件代码行数统计
 - 函数代码行数统计
+- 重复文件检测
+- 大目录检测
 
 #### 效果图
 
@@ -19,3 +21,7 @@ https://gitee.com/openeuler-competition/summer-2021/issues/I3GZRY
 ![](image/README/1628931199833.png)
 
 ![](image/README/1628931224366.png)
+
+![](image/README/1633012822862.png)
+
+![](image/README/1633012854995.png)

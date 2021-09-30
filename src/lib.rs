@@ -25,6 +25,7 @@ mod tests {
 
         println!("{:?}", tokens.next().span().start());
         println!("{:?}", tokens.next().span().end());
+        println!("{:?}", tokens);
 
         // for token in tokens.into_iter() {
         //     println!("{:}", token);

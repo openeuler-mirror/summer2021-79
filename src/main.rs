@@ -2,6 +2,7 @@ use clap::{Arg, App, SubCommand, ArgMatches};
 
 mod tools;
 use tools::{process_cc, process_loc, process_locf};
+use tools::{process_large_dir, process_file_duplicate};
 
 
 fn main() {
@@ -39,6 +40,26 @@ fn main() {
                 .default_value("./")
             )
         )
+        .subcommand(
+            SubCommand::with_name("ldir")
+            .about("Find the directory with most file")
+            .arg(
+                Arg::with_name("input")
+                .help("Sets the input directory to use")
+                .required(true)
+                .default_value("./")
+            )
+        )
+        .subcommand(
+            SubCommand::with_name("fdupl")
+            .about("Compute the file duplicate rate")
+            .arg(
+                Arg::with_name("input")
+                .help("Sets the input directory to use")
+                .required(true)
+                .default_value("./")
+            )
+        )
         .get_matches();
     
     if let Some(matches) = matches.subcommand_matches("cc") {
@@ -54,6 +75,16 @@ fn main() {
     if let Some(matches) = matches.subcommand_matches("locf") {
         let path_str = matches.value_of("input").unwrap();
         process_locf(path_str)
+    }
+
+    if let Some(matches) = matches.subcommand_matches("ldir") {
+        let path_str = matches.value_of("input").unwrap();
+        process_large_dir(path_str)
+    }
+
+    if let Some(matches) = matches.subcommand_matches("fdupl") {
+        let path_str = matches.value_of("input").unwrap();
+        process_file_duplicate(path_str)
     }
 }
 
