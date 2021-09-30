@@ -14,7 +14,7 @@ https://gitee.com/openeuler-competition/summer-2021/issues/I3GZRY
 
 #### 效果图
 
-![](image/README/1628931141142.png)
+![](image/README/1633012906935.png)
 
 ![](image/README/1628931178424.png)
 
